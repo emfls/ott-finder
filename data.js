@@ -15,7 +15,8 @@ const titles=[
     "scope": "공식 페이지에 시즌 3개 표시. 각 시즌·요금제별 실제 재생 가능 여부는 로그인 후 확인 필요.",
     "proof": "공식 작품 페이지 확인",
     "categories": [],
-    "checkedAt": "2026.11.14"
+    "checkedAt": "2026.11.14",
+    "evidence": "작품 페이지"
   },
   {
     "id": "tangerines",
@@ -33,7 +34,8 @@ const titles=[
     "scope": "리미티드 시리즈 표기 확인. 회차·요금제별 실제 재생 가능 여부는 로그인 후 확인 필요.",
     "proof": "공식 작품 페이지 확인",
     "categories": [],
-    "checkedAt": "2026.11.14"
+    "checkedAt": "2026.11.14",
+    "evidence": "작품 페이지"
   },
   {
     "id": "boyhood",
@@ -49,10 +51,11 @@ const titles=[
     "url": "https://www.coupangplay.com/catalog",
     "source": "쿠팡 뉴스룸 (2025-05-09 발표)",
     "sourceUrl": "https://news.coupang.com/archives/52981/",
-    "scope": "2025년 광고형 제공 발표에서 작품명을 확인. 현재 카탈로그·시즌별 제공·요금 조건은 미확인. 아래 링크는 작품 바로가기가 아닌 공식 카탈로그.",
+    "scope": "2025년 광고형 제공 발표에서 작품명을 확인. 현재 카탈로그·시즌별 제공·요금 조건은 미확인. 아래 링크는 작품 바로가기가 아닌 공식 카탈로그. 조사 환경에서 공식 카탈로그가 지역 제한 화면으로 이동하여 현재 한국 카탈로그는 확인하지 못함.",
     "proof": "과거 공식 발표 · 현재 미확인",
     "categories": [],
-    "checkedAt": "2026.11.14"
+    "checkedAt": "2026.11.14",
+    "evidence": "과거 발표"
   },
   {
     "id": "semantic-series",
@@ -70,7 +73,8 @@ const titles=[
     "scope": "시즌 1 작품 페이지 확인. 구독 포함·개별 구매·회차별 실제 재생 조건은 미확인.",
     "proof": "공식 작품 페이지 확인",
     "categories": [],
-    "checkedAt": "2026.11.14"
+    "checkedAt": "2026.11.14",
+    "evidence": "작품 페이지"
   },
   {
     "id": "semantic-movie",
@@ -88,7 +92,8 @@ const titles=[
     "scope": "영화 페이지와 2시간 57분 표기 확인. 현재 구독 포함·대여·구매 조건은 미확인.",
     "proof": "공식 작품 페이지 확인",
     "categories": [],
-    "checkedAt": "2026.11.14"
+    "checkedAt": "2026.11.14",
+    "evidence": "작품 페이지"
   },
   {
     "id": "recipe",
@@ -106,7 +111,8 @@ const titles=[
     "scope": "시즌 1 작품 페이지 확인. 구독 포함·개별 구매·회차별 실제 재생 조건은 미확인.",
     "proof": "공식 작품 페이지 확인",
     "categories": [],
-    "checkedAt": "2026.11.14"
+    "checkedAt": "2026.11.14",
+    "evidence": "작품 페이지"
   },
   {
     "id": "pinocchio",
@@ -126,7 +132,8 @@ const titles=[
     "source": "넷플릭스 한국어 공식 작품 페이지",
     "scope": "공식 영화 페이지에서 스톱모션 설명 확인. 요금제별 실제 재생·제공 종료일은 미확인.",
     "proof": "공식 작품 페이지 확인 · 한국 재생 미확인",
-    "checkedAt": "2026.11.14"
+    "checkedAt": "2026.11.14",
+    "evidence": "작품 페이지"
   },
   {
     "id": "arcane",
@@ -146,7 +153,8 @@ const titles=[
     "source": "넷플릭스 한국어 공식 작품 페이지",
     "scope": "공식 페이지에 성인 애니메이션·시리즈, 시즌 1·2 예고편 표시 확인. 시즌별 실제 재생 가능 여부는 미확인.",
     "proof": "공식 작품 페이지 확인 · 한국 재생 미확인",
-    "checkedAt": "2026.11.14"
+    "checkedAt": "2026.11.14",
+    "evidence": "작품 페이지"
   },
   {
     "id": "our-planet",
@@ -166,7 +174,8 @@ const titles=[
     "source": "넷플릭스 한국어 공식 작품 페이지",
     "scope": "공식 페이지에서 다큐멘터리 및 시즌 2개 표시 확인. 회차·시즌별 실제 재생 가능 여부는 미확인.",
     "proof": "공식 작품 페이지 확인 · 한국 재생 미확인",
-    "checkedAt": "2026.11.14"
+    "checkedAt": "2026.11.14",
+    "evidence": "작품 페이지"
   },
   {
     "id": "pinocchio-making",
@@ -186,7 +195,50 @@ const titles=[
     "source": "넷플릭스 한국어 공식 작품 페이지",
     "scope": "공식 페이지의 다큐멘터리 영화 분류 확인. 애니메이션 제작에 관한 다큐이며 애니메이션 본편으로 분류하지 않음. 실제 재생·요금 조건은 미확인.",
     "proof": "공식 작품 페이지 확인 · 한국 재생 미확인",
-    "checkedAt": "2026.11.14"
+    "checkedAt": "2026.11.14",
+    "evidence": "작품 페이지"
+  },
+  {
+    "id": "octopus",
+    "title": "나의 문어 선생님",
+    "aliases": "my octopus teacher 나의문어선생님",
+    "type": "영화",
+    "categories": [
+      "다큐멘터리"
+    ],
+    "genre": "다큐멘터리 · 가족",
+    "provider": "넷플릭스",
+    "mode": "구독형 안내",
+    "tone": "green",
+    "mark": "다큐멘터리",
+    "intro": "바다에서 만난 문어와 영화감독의 관계를 다룬 자연 다큐멘터리.",
+    "url": "https://www.netflix.com/kr/title/81045007",
+    "source": "넷플릭스 한국어 공식 작품 페이지",
+    "scope": "공식 작품 페이지의 다큐멘터리 영화·자연 및 생태 분류와 한국어 자막 표기를 확인. 한국 IP·로그인 재생, 요금제·지역별 제공 조건은 미확인. 언어 목록도 실제 계정에서는 다를 수 있음.",
+    "proof": "공식 자료 확인 · 한국 실제 재생 미확인",
+    "evidence": "작품 페이지",
+    "checkedAt": "2026.11.15"
+  },
+  {
+    "id": "klaus",
+    "title": "클라우스",
+    "aliases": "klaus 크리스마스 애니",
+    "type": "영화",
+    "categories": [
+      "애니메이션"
+    ],
+    "genre": "애니메이션 · 가족",
+    "provider": "넷플릭스",
+    "mode": "구독형 안내",
+    "tone": "green",
+    "mark": "애니메이션",
+    "intro": "우체부와 장난감 장인의 만남을 그린 가족 애니메이션 영화.",
+    "url": "https://www.netflix.com/kr/title/80183187",
+    "source": "넷플릭스 한국어 공식 작품 페이지",
+    "scope": "공식 작품 페이지의 영화 분류·한국어 오디오/자막 표기 및 공식 애니메이션 카테고리 내 작품 등재 확인. 한국 IP·로그인 재생, 요금제·지역별 제공 조건은 미확인. 언어 목록도 실제 계정에서는 다를 수 있음.",
+    "proof": "공식 자료 확인 · 한국 실제 재생 미확인",
+    "evidence": "작품 페이지",
+    "checkedAt": "2026.11.15"
   }
 ];
 if(typeof module!=="undefined")module.exports=titles;
