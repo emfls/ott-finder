@@ -1,0 +1,20 @@
+const assert=require('node:assert/strict');
+const fs=require('fs'),vm=require('vm');
+const media=require('../media-20261115-v3.js'),titles=require('../data-20261115-v2.js');
+assert.equal(Object.keys(media.manifest.posters).length,0);assert.equal(Object.keys(media.manifest.logos).length,0);
+for(const t of titles){const h=media.render(t);assert(!h.includes('<img'));assert(h.includes('현재 재생 미확인'));assert(h.includes('공식 포스터 아님'));assert(h.includes(t.provider));}
+assert(media.render(titles.find(t=>t.id==='boyhood')).includes('과거 발표 출처'));
+const approved={kind:'poster',rightsStatus:'verified',scope:'commercial-web-display',rightsEvidence:'https://example.com/grant',sourceUrl:'https://example.com/poster',verifiedAt:'2026-11-15',credit:'Test rights holder',src:'assets/posters/test.webp'};
+assert(media.allowed(approved,'poster'));
+for(const patch of [{rightsStatus:'pending'},{rightsEvidence:''},{scope:'personal-use'},{src:'https://third-party.invalid/image.jpg'},{src:'assets/posters/../secrets.svg'},{src:'data:image/png;base64,abc'},{verifiedAt:''},{credit:''}])assert(!media.allowed({...approved,...patch},'poster'));
+assert(!media.allowed(approved,'logo'));
+const h=media.render(titles[0],{posters:{squid:approved},logos:{}});assert(h.includes('licensed-poster'));assert(h.includes('포스터 출처'));assert(!h.includes('공식 포스터 아님'));
+assert(!media.render({...titles[0],provider:'<img onerror="x">',mark:'<script>x</script>'}).includes('<script>'));
+const ids=['query','provider','type','category','evidence','mode','count','empty','cards','searchForm','savedOnly','reset','emptyReset'];const els=Object.fromEntries(ids.map(id=>[id,{value:'',innerHTML:'',hidden:false,addEventListener(){},setAttribute(){}}]));
+const ctx={document:{getElementById:id=>els[id],querySelectorAll:()=>[]},localStorage:{getItem:()=>null,setItem(){}}};vm.createContext(ctx);
+vm.runInContext(['data-20261115-v2.js','media-20261115-v3.js','app-20261115-v3.js'].map(p=>fs.readFileSync(p,'utf8')).join('\n'),ctx);
+assert.equal((els.cards.innerHTML.match(/source-badge/g)||[]).length,12);assert(!els.cards.innerHTML.includes('<img'));
+els.query.value='시맨틱에러';vm.runInContext('render()',ctx);assert.equal((els.cards.innerHTML.match(/source-badge/g)||[]).length,2);
+vm.runInContext('reset()',ctx);assert.equal((els.cards.innerHTML.match(/source-badge/g)||[]).length,12);
+vm.runInContext("saved.add('klaus');savedOnly=true;render()",ctx);assert.equal((els.cards.innerHTML.match(/source-badge/g)||[]).length,1);
+console.log('PASS: empty rights manifest, 12 honest source badges, rights/path gate, escaping, runtime search/reset/favorites');

@@ -1,0 +1,16 @@
+/* Media slots do not imply verified playback or a logo licence. */
+.art{height:220px;align-items:flex-end;padding-bottom:43px}
+.art .title-art{font-size:31px;padding:0 18px}
+.art:after{display:none}
+.source-badge{position:absolute;right:12px;top:12px;z-index:2;display:grid;gap:4px;max-width:calc(100% - 24px);padding:9px 11px;background:#161815;color:#fff9ed;border:1px solid #d4d4c855;box-shadow:0 3px 14px #0002;text-align:right}
+.source-badge b{font:650 12px/1.35 system-ui,sans-serif;letter-spacing:0}
+.source-badge small{font:9px/1.4 system-ui,sans-serif;color:#d8ddcc}
+.art .poster-status{position:absolute;bottom:13px;left:12px;right:12px;text-align:center;font:9px/1.5 system-ui,sans-serif;color:#fff9ed;letter-spacing:0}
+.art.has-poster{height:auto;aspect-ratio:2/3;padding:0;background:#171815}
+.art.has-poster:before,.art.has-poster:after{display:none}
+.licensed-poster{display:block;width:100%;height:100%;object-fit:contain}
+.provider-logo{display:block;max-width:100%;object-fit:contain;margin-left:auto}
+.media-credit{font:10px/1.6 system-ui,sans-serif;color:#59604f;padding:12px 18px;margin:0;border-bottom:1px solid #d1d1c3;overflow-wrap:anywhere}
+.media-credit a{color:inherit;text-underline-offset:3px}
+.media-status{font-size:12px;line-height:1.8;color:#4b5343;border-left:2px solid #7a826a;padding-left:15px}
+@media(max-width:500px){.art{height:215px}.source-badge{top:10px;right:10px}.art .title-art{font-size:29px}.media-status{font-size:11px}}
